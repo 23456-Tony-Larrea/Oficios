@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 import { Resume, Experience, Education, Skill } from '../models/resume';
+
+
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
@@ -10,9 +12,9 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   styleUrls: ['./elaborador.component.css']
 })
 export class ElaboradorComponent implements OnInit {
-
   resume = new Resume();
   degrees = ['Básico', 'Inicial','Bachillerato', 'Estudios Superiores'];
+  enteros = [1, 2 , 3];
 
   constructor() { 
     this.resume = JSON.parse(sessionStorage.getItem('resume')) || new Resume();

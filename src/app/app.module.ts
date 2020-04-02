@@ -7,13 +7,16 @@ import { VisualizadorComponent } from './visualizador/visualizador.component';
 import { ElaboradorComponent } from './elaborador/elaborador.component';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { SolicitudComponent } from './solicitud/solicitud.component';
+import { OficiosComponent } from './oficios/oficios.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     VisualizadorComponent,
-    ElaboradorComponent
+    ElaboradorComponent,
+    SolicitudComponent,
+    OficiosComponent
   ],
   imports: [
     BrowserModule,
