@@ -1,4 +1,5 @@
 export class Solicitudes{
+<<<<<<< HEAD
     sumillas:string;
     destinatario:string;
     presentacionSolicitante:string;
@@ -17,3 +18,13 @@ export class Solicitudes{
     export class Ing{
         catalogo:string;
     }
+=======
+sumillas:string;
+destinatario:string;
+presentacionSolicitante:string;
+cuerpo:string;
+despedida:string;
+fecha:Date;
+firma:string;
+}
+>>>>>>> origin/master

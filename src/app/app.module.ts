@@ -8,6 +8,7 @@ import { ElaboradorComponent } from './elaborador/elaborador.component';
 import { LoginComponent } from "./login/login.component";
 import { RegistrationComponent } from './registration/registration.component';
 import { HttpClientModule} from '@angular/common/http';
+<<<<<<< HEAD
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NbThemeModule } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,12 +27,18 @@ import { HojaDeVidaComponent } from './elaborador/hoja-de-vida/hoja-de-vida.comp
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
+=======
+import { FormsModule } from '@angular/forms';
+import { SolicitudComponent } from './solicitud/solicitud.component';
+import { OficiosComponent } from './oficios/oficios.component'
+>>>>>>> origin/master
 
 @NgModule({
   declarations: [
     AppComponent,
     VisualizadorComponent,
     ElaboradorComponent,
+<<<<<<< HEAD
     LoginComponent,
     RegistrationComponent,
     NavbarComponent,
@@ -40,6 +47,10 @@ import { MatSelectModule } from '@angular/material/select';
     OficiosComponent,
     SolicitudesComponent,
     HojaDeVidaComponent
+=======
+    SolicitudComponent,
+    OficiosComponent
+>>>>>>> origin/master
   ],
   imports: [
     BrowserModule,
