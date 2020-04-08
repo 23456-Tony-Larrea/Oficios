@@ -1,22 +1,13 @@
+<!--SOLICITUDES-->
+
+<nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-between">
+    <div class="navbar-brand mb-0 h1 text-white">SOLICITUDES- YAVIRAC</div>
+  </nav>
+  <!--Sumillas-->
   <div class="container-fluid">
-    <nav class="navbar navbar-expand navbar-light bg-primary d-flex justify-content-between">
-      <div class="navbar-brand mb-0 h1 text-white">SOLICITUD - YAVIRAC</div>
-    </nav>
     <form #solicitudForm="ngForm">
       <div class="row">
         <div class="col-md-8">
-          <div class="shadow-sm card"> 
-            <div class="card-body">
-              <h4 class="card-title d-flex align-items-center">
-                <i class="material-icons">
-                  today
-                </i>
-                Fecha:
-              </h4>
-              <label id="fecha" for="fecha">{{date}}</label>
-            </div>
-          </div>
-          <!--Lugar-->
           <div class="shadow-sm card">
             <div class="card-body">
               <h4 class="card-title d-flex align-items-center">
@@ -39,30 +30,29 @@
               
   
                   <!--Destinatario-->
-                  <div class="shadow-sm card">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between card-title">
-                      <h4 class="card-title d-flex align-items-center">
-                        <i class="material-icons">
-                         person
-                        </i>
-                        Destinatario:
-                      </h4>
-                    <button class="btn btn-primary" (click)="agregarCatalogo()">+</button>
-                  </div>
-                  <div class="row" *ngFor="let ed of solicitud.listaIng; let i=index">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="shadow-sm card">
+                        <div class="card-body">
+                          <h4 class="card-title d-flex align-items-center">
+                            <i class="material-icons">
+                             person
+                            </i>
+                            Destinatario :</h4>
+                          
                             <div class="col-md-6">
+                            <div class="row">
                               <div class="form-group">
-                                <select class="form-control" (change)="evento($event)" placeholder="Destinatario" name="catalogo{{i}}" [(ngModel)]="ed.catalogo"
-                                  #prof="ngModel" required
-                                  [ngClass]="{'is-invalid': prof.invalid && (prof.touched || solicitudForm.submitted) }">
-                                  <option [value]="d" *ngFor="let d of listaProf">{{d}}</option>
-                                </select>
+                                <input type="text" class="form-control" [(ngModel)]="solicitud.destinatario" name="destinatario" placeholder="destinatario:"
+                                  #destinatario="ngModel" required
+                                  [ngClass]="{'is-invalid': destinatario.invalid && (destinatario.touched || solicitudForm.submitted) }">
+                              </div>
+                              </div>
+                              </div>
                               </div>
                             </div>
-                            </div>
-                            </div>
-                            </div>
+                          </div>
+                  </div>
                    
           <!--PresentacionSolicitante-->
               <div class="row">
@@ -88,29 +78,6 @@
                         </div>
                       </div>
               </div>
-              <!--Cedula-->
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="shadow-sm card">
-                    <div class="card-body">
-                      <h4 class="card-title d-flex align-items-center">
-                        <i class="material-icons">
-                         person
-                        </i>
-                        Cedula:</h4>
-                      
-                        <div class="col-md-6">
-                        <div class="row">
-                          <div class="form-group">
-                            <input type="text" class="form-control" [(ngModel)]="solicitud.cedula" name="cedula" placeholder="Cedula:"
-                            #cedula="ngModel" required
-                            [ngClass]="{'is-invalid': cedula.invalid && (cedula.touched || solicitudForm.submitted) }">                           </div>
-                          </div>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-              </div>
               <!--Cuerpo-->
               <div class="shadow-sm card">
                 <div class="card-body">
@@ -127,30 +94,7 @@
                   </div>
                 </div>
               </div>
-
-                <!--Titulacion-->
-                <div class="shadow-sm card">
-                  <div class="card-body">
-                    <h4 class="card-title d-flex align-items-center">
-                      <i class="material-icons">
-                        library_books
-                      </i>
-                      Proyecto de Titulacion:
-                    </h4>
-          
-                    <div class="col-md-8">
-                    <div class="row">
-                      <div class="form-group">
-                        <label>Titulo del Poyecto:</label>
-                        <input type="text" class="form-control" [(ngModel)]="solicitud.titulacion" name="titulacion" placeholder="Titulacion"
-                        #titulacion="ngModel" required
-                        [ngClass]="{'is-invalid': titulacion.invalid && (titulacion.touched || solicitudForm.submitted) }">
-                        
-                      </div>
-                    </div>
-                    </div>
-                  </div>
-                </div>  
+                     
                   <!--despedida-->
                   <div class="shadow-sm card">
                     <div class="card-body">
@@ -159,13 +103,41 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                         <Label>Atentamente</Label>
+                         <textarea class="form-control"[(ngModel)]='solicitud.despedida' name="despedida" rows="3"
+                        placeholder="despedida" #despedida="ngModel" required
+                        [ngClass]="{'is-invalid':despedida.invalid && (despedida.touched|| solicitudForm.submitted)}"></textarea>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                    
+       
+                       
+                   
+               <!--fecha-->
+               <div class="row">
+                <div class="col-md-8">
+                  <div class="shadow-sm card">
+                    <div class="card-body">
+                      <h4 class="card-title d-flex align-items-center">
+                        <i class="material-icons">
+                          insert_invitation
+                        </i>
+                       Fecha :</h4>
+                      
+                        <div class="col-md-6">
+                        <div class="row">
+                          <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="solicitud.fecha" name="fecha" placeholder="fecha"
+                              #fecha="ngModel" required
+                              [ngClass]="{'is-invalid':fecha.invalid && (fecha.touched || solicitudForm.submitted) }">
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>              
                     </div>
                 
         <div class="col-md-4">

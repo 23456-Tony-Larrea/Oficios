@@ -4,6 +4,16 @@ export class Solicitudes{
     presentacionSolicitante:string;
     cuerpo:string;
     despedida:string;
-    fecha:Date;
+    fecha:string;
     firma:string;
+    listaIng:Ing[]=[];
+    cedula:string
+    titulacion:string
+    constructor(){
+        this.listaIng.push(new Ing())
+
+    } 
+    }
+    export class Ing{
+        catalogo:string;
     }

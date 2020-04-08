@@ -81,7 +81,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   instituto(e) {
-    console.log(parseInt(e.target.value));
+    console.log(e.target.value);
     this.tipoSeleccionado = parseInt(e.target.value);
     //console.log('valor_:',this.tipoSeleccionado);
 

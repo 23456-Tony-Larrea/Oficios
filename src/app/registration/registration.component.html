@@ -60,7 +60,7 @@
                     <div>
                         <select formControlName="instituto" (change)="instituto($event)" class="custom-select">
                             <option value="0">Instituto</option>
-                            <option *ngFor="let i of listaInstitutos" [ngValue]="i.id">{{i.instituto}}</option>
+                            <option *ngFor="let i of listaCargos" [ngValue]="i.cargo">{{i.cargo}}</option>
                         </select>
                     </div>
                 </td>
