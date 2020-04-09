@@ -125,10 +125,6 @@
   },
   "defaultProject": "GEDI",
   "cli": {
-<<<<<<< HEAD
     "analytics": "8d4628e3-21ef-4c9d-9678-2a5f9b1ac546"
-=======
-    "analytics": "96555699-e12a-4a11-9e14-844318fd0da9"
->>>>>>> origin/master
   }
 }

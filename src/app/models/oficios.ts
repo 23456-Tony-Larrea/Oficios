@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export class Oficios {
     fecha:string;
@@ -17,16 +16,3 @@ export class Oficios {
 export class Ordenado{
     catalogo:string;
 }
-=======
-export class Oficios {
-fecha:Date;
-lugar:string;
-numeroOficio:string;
-destinatario:string;
-asunto:string;
-cuerpo:string;
-despedida:string;
-firma:string;
-
-}
->>>>>>> origin/master
